@@ -1,31 +1,41 @@
 import HttpAdaptor from "../../components/helpers/http";
 import ApiStore from "../api";
+import { getBaseHttpUrl } from 'utilities';
 
-/**
- * ColorThemesService class handles all the Color Themes related operations
- */
-class NewsFeedService extends HttpAdaptor {
-	/**
-	 * Constructs the class and accepts ths API configurations on class initiation.
-	 */
-	constructor(config, userState) {
-
+class NewsFeedService extends HttpAdaptor{
+	
+	constructor(){
+		super(getBaseHttpUrl());
 	}
 
-	/**
-	 * Updates the list of the Color themes.
-	 * @param {object} payload the payload object
-	 * @returns {Promise} Admin color theme list and notice
-	 */
-	getNewsFeedLists() {
-
+	getMaxNewsCount = () => {
 		return super
-			.setMethod(ApiStore.GET_NEWS_FEED_LISTS.method)
-			.setHeaders()
-			.setPath(ApiStore.GET_NEWS_FEED_LISTS.url)
-			.setPayload()
-			.makeCall();
+		.setMethod(ApiStore.GET_MAX_NEWS_FEED_ID.method)
+		.setHeaders()
+		.setPath(ApiStore.GET_MAX_NEWS_FEED_ID.url)
+		.setPayload()
+		.makeCall();
 	}
+
+	getNewsItem = (id) => {
+		return super
+		.setMethod(ApiStore.GET_NEWS_ITEM.method)
+		.setHeaders()
+		.setPath(ApiStore.GET_NEWS_ITEM.url(id))
+		.setPayload()
+		.makeCall();
+	}
+
+	getNewsStories = () => {
+		return super
+		.setMethod(ApiStore.GET_NEWS_STORIES.method)
+		.setHeaders()
+		.setPath(ApiStore.GET_NEWS_STORIES.url)
+		.setPayload()
+		.makeCall();
+	}
+	
+
 }
 
 export default NewsFeedService;

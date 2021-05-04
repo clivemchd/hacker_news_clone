@@ -1,3 +1,3 @@
-export const SET_NEWS_FEED = 'set_news_feed';
+export const SET_NEWS_COUNT = 'set_news_count';
 
-export const RESET = 'reset';
+export const SET_NEWS_STORIES = 'set_news_stories';

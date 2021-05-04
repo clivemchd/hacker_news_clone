@@ -1,0 +1,6 @@
+{
+	"protocol" : "https",
+	"sub_domain" : "hacker-news",
+	"domain" : "firebaseio.com",
+	"api_version": "v0"
+}

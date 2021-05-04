@@ -1,0 +1,5 @@
+@import './vendor_prefixes.mixin.scss';
+
+div{
+	@include scrollBarStyle();
+}

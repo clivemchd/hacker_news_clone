@@ -1,3 +1,5 @@
+import { getBaseHttpUrl } from 'utilities';
+
 /**
  * HttpAdaptor for making HTTP calls
  */
@@ -27,7 +29,7 @@ export default class HttpAdaptor {
 	 */
 	constructor(baseUrl) {
 		this._method = "GET";
-		this._baseUrl = baseUrl;
+		this._baseUrl = baseUrl
 	}
 
 	/**
@@ -54,13 +56,10 @@ export default class HttpAdaptor {
 	 * @param {object} headers
 	 */
 	setHeaders(callHeaders = null) {
-		// const APPLICATION_ENV = process.env.REACT_APP_NODE_ENV;
-		// const CONFIG = getEnvConfig(APPLICATION_ENV);
 		this._headers = callHeaders;
 
 		let tmp = {
 			"content-type"       : "application/json",
-			// "application_api_key": CONFIG.application_api_key
 		};
 
 		if (this._headers) {
@@ -98,17 +97,14 @@ export default class HttpAdaptor {
 	/**
 	 * Makes the final HTTP call
 	 */
-	makeCall(isBlob) {
+	makeCall() {
+
 		return fetch(this.url, this.requestMeta)
 			.then((res) => {
 				if (res.status >= 400) {
 					return res.json().then((err) => {
 						throw err;
 					});
-				}
-
-				if(isBlob) {
-					return res.blob();
 				}
 				
 				return res.json();

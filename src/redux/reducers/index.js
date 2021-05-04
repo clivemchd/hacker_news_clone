@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
-import newsFeedReducer from "./hackerNews.reducer";
+import maxNewsCount from "./maxCount.reducer";
+import newsStories from "./maxCount.reducer";
 
 const reducers = combineReducers({
-	newsFeedReducer,
+	maxNewsCount,
+	newsStories,
 });
 
 export default reducers;

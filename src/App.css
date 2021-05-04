@@ -1,0 +1,27 @@
+:root{
+	--header-background-color: #ffffff;
+	--login-background-color: #ffffff;
+	--primary-text-color : #ffffff;
+	--primary-background-color: #ffffff;
+	--secondary-text-color: #ffffff;
+	--secondary-background-color: #ffffff;
+	--primary-link-color: #ffffff;
+	--secondary-link-color: #ffffff;
+	--primary-button-color: #ffffff;
+	--secondary-button-color: #ffffff;
+	--sub-header-background-color: #ffffff;
+	--tertiary-text-color: #ffffff;
+	--footer-background-color: #ffffff;
+	--background-image: url('');
+	--login-logo: url('');
+	--dashboard-logo: url('');
+	--loader-image: url('');
+}
+
+html,body,#root{
+	height: 100%;;
+}
+
+p{
+	margin: 0
+}
