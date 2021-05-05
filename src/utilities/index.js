@@ -8,6 +8,21 @@ const getBaseHttpUrl = () => {
 	return `${protocol}://${sub_domain}.${domain}/${api_version}`
 }
 
+/**
+ * Checks if object is defined at every level in the path provided
+ * @param {object} obj - The object to check
+ * @param {string} path  - The path inside the object to check. eg: "partner_configuration.oauth_service.url"
+ */
+ const isDefined = (obj, path) =>{
+	let pathArr = path.split(".");
+	let newObj = { ...obj };
+	return pathArr.every((elem, index) => {
+		newObj = newObj[pathArr[index]];
+		return newObj;
+	});
+}
+
 export {
-	getBaseHttpUrl
+	getBaseHttpUrl,
+	isDefined
 }

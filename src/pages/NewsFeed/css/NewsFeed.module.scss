@@ -2,7 +2,104 @@
 @import '../../../assets//scss/base.scss';
 @import '../../../assets/scss/default_color.scss';
 
-.NewsFeedWrapper {
-	border: 1px solid green;
-	height: 100%;
+.CommonFontAttribute{
+	font-weight: 700;
+	font-size: 16px;
+	font-style: normal;
 }
+
+.NewsFeedWrapper {
+	@include flex(column);
+	@include padding(51px, 99px, 0px, 0px);
+	background: $background-light;
+	height: 89vh;
+}
+
+.NewsStoryWrapper{
+	@include flex(column);
+	@include scrollBarStyle(0px);
+	overflow: auto;
+}
+
+.NewsStory {
+	@include flex(column);
+	@include margin(16px, 0px, 4.4%, 4.4%);
+	@include boxShadow(0px, 3px, 28px, rgba(0, 0, 0, 0.08));
+	@include padding-axis(16px, 16px);
+	border-radius: 12px;
+	background: $background-light;
+	width: 91.1%;
+	min-height: 123px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+
+.NewsItemTitle{
+	font-size: 12px;
+	line-height: 16.34px;
+	margin-bottom: 4px;
+}
+
+.NewsItemDescription{
+	font-size: 10px;
+	line-height: 13.62px;
+	margin-bottom: 12.5px;
+	color: $text-grey;
+	overflow: hidden;
+	max-height: 50px;
+}
+
+.NewsItemFooter{
+	@include flex(row);
+	@include alignItems(center);
+	position: absolute;
+	bottom: 20px;
+	font-size: 8px;
+	line-height: 10.89px;
+	color: $text-grey;
+}
+
+.NewsItemClockIcon{
+	width: 10px;
+	height: 10px;
+	margin-right: 3px;
+}
+
+.LastNewsStoryNode{
+	margin-bottom: 16px;
+}
+
+.ButtonWrapper{
+	@include flex(row);
+	@include alignItems(flex-start);
+	@include margin(16px, 0px, 16px, 0px);
+}
+
+.CommonButtonWrapperStyle{
+	@include padding-axis(12px, 4px);
+	border-radius: 12px;
+	height: 24px;
+	line-height: 16px;
+}
+
+.CurrentNewsButton{
+	background: $primary-color;
+}
+
+.PastNewsButton{
+	@include margin(0px, 0px, 7px, 0px);
+	background: $background-grey;
+}
+
+.LoadMoreButton{
+	@include margin(16px, 16px, 4.4%, 4.4%);
+	position: absolute;
+	bottom: 100px;
+	width: 91.1%;
+	background: $primary-color;
+	height: 48px;
+	border-radius: 12px;
+	line-height: 21.79px;
+}
+

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 :root{
 	--header-background-color: #ffffff;
 	--login-background-color: #ffffff;
@@ -19,7 +21,8 @@
 }
 
 html,body,#root{
-	height: 100%;;
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
 }
 
 p{

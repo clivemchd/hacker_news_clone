@@ -1,7 +1,6 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ModuleCss from './css/Card.module.scss';
 
 export default class Card extends Component {
 
@@ -14,11 +13,11 @@ export default class Card extends Component {
 	}
 	
 	render() {
-		const { children, classname, inlineStyle, width, height, minHeight, background } = this.props;
+		const { children, className, inlineStyle, width, height, minHeight, background } = this.props;
 
 		return (
 			<div 
-				className={`${ModuleCss.cardWrapper} ${classname}`}
+				className={`${className}`}
 				style={{
 					width			: width, 
 					height		: height,
@@ -45,10 +44,10 @@ Card.propTypes = {
 
 Card.defaultProps = {
 	children: <></>,
-	height: 'auto',
-	width: 'auto',
-	minHeight: 'auto',
-	// className: '',
+	height: '',
+	width: '',
+	minHeight: '',
+	className: '',
 	inlineStyle: null,
 	background: ''
 }

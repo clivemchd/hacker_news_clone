@@ -1,0 +1,17 @@
+@import '../../../../assets/scss/vendor_prefixes.mixin.scss';
+@import '../../../../assets//scss/base.scss';
+@import '../../../../assets//scss/default_color.scss';
+
+.FooterWrapper {
+	@include flex(row);
+	@include justifyContent(center);
+	@include alignItems(center);
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	background: $primary-color;
+}
+
+.LogoDark{
+	height: 19px;
+}

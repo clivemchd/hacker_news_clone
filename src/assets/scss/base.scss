@@ -3,3 +3,7 @@
 div{
 	@include scrollBarStyle();
 }
+
+p{
+	margin: 0;
+}

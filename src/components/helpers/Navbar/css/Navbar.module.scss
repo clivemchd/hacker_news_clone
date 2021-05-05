@@ -1,0 +1,19 @@
+@import '../../../../assets/scss/vendor_prefixes.mixin.scss';
+@import '../../../../assets//scss/base.scss';
+@import '../../../../assets//scss/default_color.scss';
+
+
+.NavbarWrapper {
+	@include flex(row);
+	@include justifyContent(center);
+	@include alignItems(center);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: $background-light;
+	@include boxShadow(0px,3px,28px,rgba(0, 0, 0, 0.08));
+}
+
+.LogoPrimary{
+	height: 19px;
+}
