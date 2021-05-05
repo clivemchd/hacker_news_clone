@@ -1,6 +1,8 @@
 import {
 	SET_NEWS_COUNT,
-	SET_NEWS_STORIES
+	SET_NEWS_STORIES,
+	SET_NEWS_ITEMS,
+	RESET
 } from "redux/actionTypes/general.type";
 import NewsFeedService from 'redux/service/newsFeed.service'
 
@@ -31,6 +33,13 @@ class NewsFeedAction {
 	 */
 	static getNewsItem = (id) => (dispatch, getstate) => {
 		return new NewsFeedService().getNewsItem(id)
+		.then(response => {
+			dispatch({
+				type : SET_NEWS_ITEMS,
+				payload : response
+			})
+			return response
+		})
 	}
 
 	/**
@@ -41,6 +50,9 @@ class NewsFeedAction {
 		return new NewsFeedService()
 		.getNewsStories()
 		.then(response => {
+			dispatch({
+				type : RESET
+			})
 			dispatch({
 				type : SET_NEWS_STORIES,
 				payload : response

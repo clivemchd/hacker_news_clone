@@ -2,6 +2,7 @@
 @import '../../../assets//scss/base.scss';
 @import '../../../assets/scss/default_color.scss';
 
+
 .CommonFontAttribute{
 	font-weight: 700;
 	font-size: 16px;
@@ -64,6 +65,12 @@
 	width: 10px;
 	height: 10px;
 	margin-right: 3px;
+}
+
+.NewsStoriesLoader{
+	@include flex(column);
+	@include justifyContent(center);
+	@include alignItems(center);
 }
 
 .LastNewsStoryNode{

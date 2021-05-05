@@ -5,7 +5,7 @@ import { GenericButton } from './css/Button.module.scss'
 export default class Button extends Component {
 
 	render() {
-		const { type, children, onClick, name, className, title, value, inlineStyle} = this.props;
+		const { type, children, onClick, name, className, title, value, inlineStyle, disabled } = this.props;
 
 		return (
 			<button 
@@ -16,6 +16,7 @@ export default class Button extends Component {
 				title={title}
 				value={value}
 				style={inlineStyle}
+				disabled={disabled}
 			>
 				{children}
 			</button>
@@ -31,7 +32,8 @@ Button.propTypes = {
 	className		: PropTypes.string,
 	title				: PropTypes.string,
 	value				: PropTypes.string,
-	inlineStyle	: PropTypes.object
+	inlineStyle	: PropTypes.object,
+	disabled		: PropTypes.bool
 }
 
 Button.defaultProps = {
@@ -40,5 +42,6 @@ Button.defaultProps = {
 	className		: '',
 	title				: '',
 	value				: '',
-	inlineStyle	: {}
+	inlineStyle	: {},
+	disabled		: false
 }

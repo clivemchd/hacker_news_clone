@@ -13,11 +13,12 @@ export default class Card extends Component {
 	}
 	
 	render() {
-		const { children, className, inlineStyle, width, height, minHeight, background } = this.props;
+		const { children, className, inlineStyle, width, height, minHeight, background, onClick } = this.props;
 
 		return (
 			<div 
 				className={`${className}`}
+				onClick={onClick}
 				style={{
 					width			: width, 
 					height		: height,
@@ -40,6 +41,7 @@ Card.propTypes = {
 	className: PropTypes.string,
 	inlineStyle: PropTypes.object,
 	background: PropTypes.string,
+	onClick : PropTypes.func
 }
 
 Card.defaultProps = {
@@ -49,5 +51,6 @@ Card.defaultProps = {
 	minHeight: '',
 	className: '',
 	inlineStyle: null,
-	background: ''
+	background: '',
+	onClick: ()=>{}
 }

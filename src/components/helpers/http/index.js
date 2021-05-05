@@ -1,4 +1,3 @@
-import { getBaseHttpUrl } from 'utilities';
 
 /**
  * HttpAdaptor for making HTTP calls

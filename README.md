@@ -22,7 +22,7 @@ Clone this repository
 git clone git@github.com:clivemchd/hacker_news_clone.git
 ```
 
-Install the dependencies and devDependencies and start the server.
+Install the dependencies and devDependencies and start the server. Please make sure you have node 14 plus installed in the system. 
 
 ```sh
 $ cd hacker_news_clone
