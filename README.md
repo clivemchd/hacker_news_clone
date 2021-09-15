@@ -1,6 +1,6 @@
 # Hacker News Clone
 
-This is a Frontend assesment test code submitted by Clive Machado with email id as clivemchd@gmail.com 
+
 
 ### What is this repository for?
 
