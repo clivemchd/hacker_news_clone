@@ -4,7 +4,7 @@ import {
 	SET_NEWS_ITEMS,
 	RESET
 } from "redux/actionTypes/general.type";
-import NewsFeedService from 'redux/service/newsFeed.service'
+import NewsFeedService from 'redux/service/NewsFeed.service'
 
 /**
  * NewsFeedService class handles all the News feed related operations
